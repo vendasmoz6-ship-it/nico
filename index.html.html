@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ContasMZ — Marketplace de Contas</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0C0C0F; --bg2:#131318; --bg3:#1A1A22;
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --accent:#6C63FF; --accent2:#FF5E84; --gold:#FFB547;
+  --green:#2ECC71; --red:#FF4757;
+  --text:#F0F0F5; --text2:#8888A0; --text3:#555568;
+  --font-h:'Syne',sans-serif; --font-b:'DM Sans',sans-serif; --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px;}
+
+.screen{display:none;position:relative;z-index:1;min-height:100vh;}
+.screen.active{display:block;}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(12,12,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 1.25rem;height:56px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-h);font-size:18px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:.65rem 1.25rem;border-radius:10px;font-size:14px;font-weight:500;cursor:pointer;border:none;font-family:var(--font-b);transition:all .18s;white-space:nowrap;}
+.btn:active{transform:scale(.97);}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border2);}
+.btn-ghost:hover{background:var(--bg3);color:var(--text);}
+.btn-accent{background:var(--accent);color:white;box-shadow:0 4px 20px rgba(108,99,255,.35);}
+.btn-accent:hover{background:#7A72FF;}
+.btn-pink{background:var(--accent2);color:white;}
+.btn-pink:hover{background:#FF7296;}
+.btn-gold{background:var(--gold);color:#1A1400;}
+.btn-gold:hover{background:#FFC060;}
+.btn-green{background:var(--green);color:white;}
+.btn-red{background:var(--red);color:white;}
+.btn-full{width:100%;}
+.btn-sm{padding:.4rem .85rem;font-size:13px;border-radius:8px;}
+
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;margin-bottom:.85rem;}
+
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 9px;border-radius:20px;text-transform:uppercase;}
+.tag-tiktok{background:rgba(0,0,0,.6);color:white;border:1px solid #333;}
+.tag-ig{background:linear-gradient(135deg,#833AB4,#E1306C,#F77737);color:white;}
+.tag-fb{background:#1877F2;color:white;}
+.tag-yt{background:#FF0000;color:white;}
+.tag-tw{background:#000;color:white;border:1px solid #333;}
+.tag-ff{background:linear-gradient(135deg,#FF6B00,#FFD700);color:#1A0A00;}
+.tag-pending{background:rgba(255,18
